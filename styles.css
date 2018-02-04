@@ -1,0 +1,154 @@
+/* background-color: #333449; */
+
+
+body {
+    background-color: royalblue;    
+    font-family: 'Lato';
+    margin-top: 300px;
+    text-align: center;
+    color: ivory;
+}
+
+#tsClock {
+    font-weight: 300;
+    font-size: 100px;
+    padding-top: 20%;
+}
+        
+#button {
+    margin-top: 20px;
+    line-height: 60px;
+    font-weight: bold;
+    color: ivory;
+    padding: 0 30px;
+    background: #3373ff;
+    border: 5px #3373ff;
+    border-radius: 15px;    
+}
+        
+#button:hover {
+    background: #3f7cff;
+    border: 5px #3f7cff;
+    color: silver;    
+}
+
+#button:target {
+    margin-top: 20px;
+    line-height: 60px;
+    font-weight: bold;
+    color: ivory;
+    padding: 0 30px;
+    background: #3373ff;
+    border: 5px #3373ff;
+    border-radius: 15px;    
+}
+
+body {
+    background-color: #333449;
+    font-family: Roboto;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background-color: #252638;
+    overflow: hidden;
+    height: 62px;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: #000;
+    
+}
+
+.navbar ul {
+    margin: 8px 0 0 0;
+    list-style: none;
+}
+
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    opacity: 0.9;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.side-nav a {
+    padding: 10px 10px 10px 30px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #ccc;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-nav a:hover {
+    color: #fff;
+}
+
+.side-nav .btn-close {
+    position: absolute;
+    top: 0;
+    right: 22px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left 0.5s;
+    padding: 20px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;   
+}
+
+.item {
+    margin:5px;
+    flex-basis:32%;
+    flex-grow:1;
+    border: 2px solid black;  
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+}
+
+
+@media (max-width:400px) {
+    .item {
+        flex-basis:100%;    
+    }
+    .item:nth-of-type(2) {
+        order:-1;
+    }
+
+    .navbar-nav{
+        display:none
+    }      
+}
