@@ -190,3 +190,9 @@ body {
         display:none
     }      
 }
+
+@media (min-width:401px) {
+    #side-menu-links {
+        display:none
+    }
+}
