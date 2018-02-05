@@ -165,6 +165,11 @@ body {
     flex-wrap: wrap;   
 }
 
+#table {
+    margin-top: 2%;
+    padding: 1%;
+}
+
 .item {
     margin:5px;
     flex-basis:32%;
