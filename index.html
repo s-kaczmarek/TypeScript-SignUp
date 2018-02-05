@@ -32,33 +32,29 @@
     
     <!-- Sidemenu -->
     
-    <div id="side-menu" class="side-nav" onclick="closeSideMenu()">
-        <a href="#" class="btn-close">&times;</a>
+    <div id="side-menu" class="side-nav">
+        <a href="#" class="btn-close" onclick="closeSideMenu()">&times;</a>
         <a href="#">Clock</a>
         <a href="#">List</a>
         <hr>
-        <div class="input"
-            <label for="username">Username</label>
-            <input name="username" id="username" type="text">
-        </div>
-        <div>
-          <label>Your Name (*)</label>
-          <input class="form-control form-flat" name="fullname" required="" aria-required="true" type="text">
-        </div>    
-                    
+        <div id="signup-form" >
+            <h1>Sign Up</h1>
+            <p id="p-signup">Please fill in this form to create an account.</p>
+            <hr>
+            <input type="text" placeholder="Enter Email" name="email" required>
+            <input type="password" placeholder="Enter Password" name="psw" required>       
+        </div>                    
     </div>
     
     <!-- Script for sidemenu -->
     
     <script>
         function openSideMenu(){
-           document.getElementById("side-menu").style.width="250px"; 
-           document.getElementById("main").style.marginLeft="250px"; 
+           document.getElementById("side-menu").style.width="400px"; 
         }
         
         function closeSideMenu(){
            document.getElementById("side-menu").style.width="0"; 
-           document.getElementById("main").style.marginLeft="0"; 
         }
     </script>
     
