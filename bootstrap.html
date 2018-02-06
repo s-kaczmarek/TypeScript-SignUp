@@ -30,10 +30,10 @@
               <span class="text-muted">Please fill this form to create an account.</span>
                             
                 <div id="signup-form" >
-                    <input type="text" placeholder="Imię" name="imie" required>
-                    <input type="text" placeholder="Pesel" name="pesel" required>     
-                    <input type="text" placeholder="Data urodzenia: DD.MM.RRRR" name="data" required>     
-                    <input type="text" placeholder="Miejsce urodzenia" name="miejsce" required>
+                    <input id="input-name" type="text" placeholder="Imię" name="imie" required>
+                    <input id="input-pesel" type="text" placeholder="Pesel" name="pesel" required>     
+                    <input id="input-date" type="text" placeholder="Data urodzenia: DD.MM.RRRR" name="data" required>     
+                    <input id="input-place" type="text" placeholder="Miejsce urodzenia" name="miejsce" required>
                     
                     <div id="signup-button">
                         <button type="button" class="btn btn-light" onclick="submitFunction()">Send</button>
@@ -41,11 +41,27 @@
                     
                     <script>
                         function submitFunction() {
-                            document.getElementById("signup-form").addtoTableFunction();
-                        }
-                        
-                        function addtoTableFunction() {
                             
+                            var name = document.getElementById("input-name");
+                            var pesel = document.getElementById("input-pesel");
+                            var date = document.getElementById("input-date");
+                            var place = document.getElementById("input-place");
+                            //todo czas z zegara
+                            
+                            
+                            var data = []
+                            fruits.push(name);
+                            
+                            i = 2
+                            
+                            document.write('<tr>');
+                            document.write('<th scope="row">' + i + '</th>');
+                            document.write('<td>Mark</td>');
+                            document.write('<td>74030178956</td>');
+                            document.write('<td>01.03.1974</td>');
+                            document.write('<td>Amsterdam</td>');
+                            document.write('<td>23:07</td>');
+                            document.write('<tr>');
                         }
                     </script>
                     
