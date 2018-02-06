@@ -1,0 +1,27 @@
+/* background-color: #333449; */
+
+
+body {
+    background-color: slategray;    
+    font-family: 'Lato';
+   
+    text-align: center;
+    color: ivory;
+}
+
+#table {
+    padding: 1%;
+    margin-top: 3%;
+}
+
+#signup-form {
+    margin-top: 2%;
+}
+
+#signup-button {
+    margin-top: 2%;
+}
+
+input {
+    border-radius: 5px;
+}

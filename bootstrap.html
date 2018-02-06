@@ -15,7 +15,7 @@
     <title>Typescript SignUp</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=latin-ext" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/css/styles.css">    
+    <link rel="stylesheet" href="/css/stylesforBootstrap.css">    
       
     
   </head>
@@ -24,12 +24,36 @@
   <body>
       
     <div class="pos-f-t">
-  <div class="collapse" id="navbarToggleExternalContent">
-    <div class="bg-dark p-4">
-      <h4 class="text-white">Collapsed content</h4>
-      <span class="text-muted">Toggleable via the navbar brand.</span>
-    </div>
-  </div>
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-dark p-4">
+              <h4 class="text-white">Sign Up</h4>
+              <span class="text-muted">Please fill this form to create an account.</span>
+                            
+                <div id="signup-form" >
+                    <input type="text" placeholder="Imię" name="imie" required>
+                    <input type="text" placeholder="Pesel" name="pesel" required>     
+                    <input type="text" placeholder="Data urodzenia: DD.MM.RRRR" name="data" required>     
+                    <input type="text" placeholder="Miejsce urodzenia" name="miejsce" required>
+                    
+                    <div id="signup-button">
+                        <button type="button" class="btn btn-light" onclick="submitFunction()">Send</button>
+                    </div>
+                    
+                    <script>
+                        function submitFunction() {
+                            document.getElementById("signup-form").addtoTableFunction();
+                        }
+                        
+                        function addtoTableFunction() {
+                            
+                        }
+                    </script>
+                    
+                </div> 
+                
+            </div>
+        </div>
+        
   <nav class="navbar navbar-dark bg-dark">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -37,75 +61,8 @@
   </nav>
 </div>  
       
-    <!-- navbar -->
-    <!--  
-
-    <nav class="navbar">
-        <span class="open-slide" onclick="openSideMenu()">
-            <a href="#">
-                <svg width='30' hegiht='30'>
-                    <path d= "M0,5 30,5" stroke="#fff" stroke-width="4"/>
-                    <path d= "M0,14 30,14" stroke="#fff" stroke-width="4"/>
-                    <path d= "M0,23 30,23" stroke="#fff" stroke-width="4"/>
-                </svg>
-            </a>
-        </span>
-        <ul class="navbar-nav">
-            <li><a href="/index.html">Clock</a></li>
-            <li><a href="/list.html">List</a></li>
-        </ul>  
-    </nav>
-      
-    -->  
     
-    <!-- Sidemenu -->
-    <!--  
-    
-    <div id="side-menu" class="side-nav">
-        <a href="#" class="btn-close" onclick="closeSideMenu()">&times;</a>
-        <div id="side-menu-links">
-            <a href="#">Clock</a>
-            <a href="#">List</a>
-            <hr>
-        </div>
-        <div id="signup-form" >
-            <h1>Sign Up</h1>
-            <p id="p-signup">Please fill this form to create an account.</p>
-            <hr>
-            <input type="text" placeholder="Imię" name="imie" required>
-            <input type="text" placeholder="Pesel" name="pesel" required>     
-            <input type="text" placeholder="Data urodzenia: DD.MM.RRRR" name="data" required>     
-            <input type="text" placeholder="Miejsce urodzenia" name="miejsce" required>       
-        </div>                    
-    </div>
-    
-    -->
-    
-    <!-- Script for sidemenu -->
-    
-    <script>
-        function openSideMenu(){
-           document.getElementById("side-menu").style.width="400px"; 
-        }
-        
-        function closeSideMenu(){
-           document.getElementById("side-menu").style.width="0"; 
-        }
-    </script>
-    
-    <div id="table">
-        
-        <!--
-        <div class="row">
-            <div class="darkerGB col-sm-3">Imię</div>
-            <div class="darkerGB col-sm-3">Pesel</div>
-            <div class="darkerGB col-sm-2">Data Urodzenia</div>
-            <div class="darkerGB col-sm-2">Miejsce Urodzenia</div>
-            <div class="darkerGB col-sm-2">Godzina wpisu</div>
-        </div>
-        -->
-        
-        
+    <div id="table">            
         <table class="table table-hover table-dark">
           <thead>
             <tr>
