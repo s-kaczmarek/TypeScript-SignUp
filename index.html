@@ -1,72 +1,100 @@
-<!DOCTYPE html>
-<html lang="">
-<head>
+<!doctype html>
+<html lang="en">
+  <head>
+      
+    <link rel="stylesheet" href="/css/reset.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Typescript SignUp</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=latin-ext" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/styles.css">    
-</head>
-
-<body>
+    <link rel="stylesheet" href="/css/stylesforBootstrap.css">    
+      
     
-    <!-- navbar -->
-
-    <nav class="navbar">
-        <span class="open-slide" onclick="openSideMenu()">
-            <a href="#">
-                <svg width='30' hegiht='30'>
-                    <path d= "M0,5 30,5" stroke="#fff" stroke-width="4"/>
-                    <path d= "M0,14 30,14" stroke="#fff" stroke-width="4"/>
-                    <path d= "M0,23 30,23" stroke="#fff" stroke-width="4"/>
-                </svg>
-            </a>
-        </span>
-        <ul class="navbar-nav">
-            <li><a href="/index.html">Clock</a></li>
-            <li><a href="/list.html">List</a></li>
-        </ul>  
-    </nav>
+  </head>
     
-    <!-- Sidemenu -->
     
-    <div id="side-menu" class="side-nav">
-        <a href="#" class="btn-close" onclick="closeSideMenu()">&times;</a>
-        <div id="side-menu-links">
-            <a href="#">Clock</a>
-            <a href="#">List</a>
-            <hr>
+  <body>
+      
+    <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-dark p-4">
+              <h4 class="text-white">Sign Up</h4>
+              <span class="text-muted">Please fill this form to create an account.</span>
+              
+              <h4 class="text-white" id="tsClock"></h4>
+              <button type="button" class="btn btn-light" id="button">UTC +1</button>     
+              <script src="/scripts/app.js"></script>
+                
+              <script src="/scripts/submitFunction.js"></script>    
+                            
+                <div id="signup-form" >
+                    <input id="input-name" type="text" placeholder="Imię" name="imie" required>
+                    <input id="input-pesel" type="text" placeholder="Pesel" name="pesel" required>     
+                    <input id="input-date" type="text" placeholder="Data urodzenia: DD.MM.RRRR" name="data" required>     
+                    <input id="input-place" type="text" placeholder="Miejsce urodzenia" name="miejsce" required>
+                    
+                    <div id="signup-button">
+                        <button type="button" class="btn btn-light" onclick="submitFunction()">Send</button>
+                    </div>
+                                    
+                </div> 
+                
+            </div>
+            
         </div>
-        <div id="signup-form" >
-            <h1>Sign Up</h1>
-            <p id="p-signup">Please fill this form to create an account.</p>
-            <hr>
-            <input type="text" placeholder="Imię" name="imie" required>
-            <input type="text" placeholder="Pesel" name="pesel" required>     
-            <input type="text" placeholder="Data urodzenia: DD.MM.RRRR" name="data" required>     
-            <input type="text" placeholder="Miejsce urodzenia" name="miejsce" required>       
-        </div>                    
-    </div>
-    
-    <!-- Script for sidemenu -->
-    
-    <script>
-        function openSideMenu(){
-           document.getElementById("side-menu").style.width="400px"; 
-        }
         
-        function closeSideMenu(){
-           document.getElementById("side-menu").style.width="0"; 
-        }
-    </script>
+  <nav class="navbar navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+</div>  
+      
     
-    
-    
-  <h1 id="tsClock"></h1>
-  <button id="button">UTC +1</button>     
-  <script src="/scripts/app.js"></script>
-    
-</body>
+    <div id="table">            
+        <table class="table table-hover table-dark">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Imię</th>
+              <th scope="col">Pesel</th>
+              <th scope="col">Data urodzenia</th>
+              <th scope="col">Miejsce Urodzenia</th>
+              <th scope="col">Godzina wpisu</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <!--    
+              <th scope="row">1</th>
+              <td>Jan</td>
+              <td>74030178956</td>
+              <td>01.03.1974</td>
+              <td>Warszawa</td>
+              <td>23:07</td>
+              -->
+            </tr>
+           
+          </tbody>
+        </table>
+        
+        
+    </div>  
+      
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
 </html>

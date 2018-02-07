@@ -25,3 +25,12 @@ body {
 input {
     border-radius: 5px;
 }
+
+#button {
+    margin-top: 0.5%;
+    font-size: 12px;
+}
+
+#tsClock {
+    margin-top: 2%;
+}
