@@ -22,7 +22,7 @@ function submitFunction() {
     cel3.innerHTML = pesel;
     cel4.innerHTML = date;
     cel5.innerHTML = place;
-    cel6.innerHTML = clockStr;
+    cel6.innerHTML = time;
     
     var number = number + 1;    
     console.log(number);
